@@ -1,0 +1,19 @@
+<head>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'object_storage/styles.css' %}" />
+	<title>Uploaded</title>
+</head>
+
+<body>
+	<h1>Form datas:</h1>
+	{% if form %}
+	    <ul>
+	        <li>Name: {{ form.name }}</li>
+	    	<!--<li>Uploaded_date: {{ form.uploaded_date }}</li>-->
+	    	<li>Status: {{ status }} </li>
+	    	<li>Text: {{ text }} </li>
+	    </ul>
+	{% else %}
+	    <p>No attachment available.</p>
+	{% endif %}
+</body>

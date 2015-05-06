@@ -1,0 +1,18 @@
+<head>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'object_storage/styles.css' %}" />
+	<title>Attachment list</title>
+</head>
+
+<body>
+	<h1>YUOR ATTACHMENTS:</h1>
+	{% if attachment_list %}
+	    <ul>
+	    {% for attachment in attachment_list %}
+	        <li>{{ attachment.name }}</li>
+	    {% endfor %}
+	    </ul>
+	{% else %}
+	    <p>No attachment available.</p>
+	{% endif %}
+</body>
